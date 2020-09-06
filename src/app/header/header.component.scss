@@ -1,0 +1,25 @@
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white;
+}
+
+.header-container {
+  width: 100%;
+  background-color: blue;
+  height: 3rem;
+  font-family: "Roboto";
+  text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+    padding-top: 1rem !important;
+  }
+}
+.active {
+  color: red;
+}
+.form-connect {
+  display: flex;
+}

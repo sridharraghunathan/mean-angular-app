@@ -1,0 +1,25 @@
+<div class="header-container">
+  <div class="header-content">
+    <h3 style="font-size: 0.8rem; margin-right: auto">
+      <a mat-button routerLink="/">my messages</a>
+    </h3>
+    <div class="form-connect">
+      <h3 *ngIf="userIsAuthenticated" style="font-size: 0.8rem">
+        <a mat-button routerLink="/create" routerLinkActive="active"
+          >Create post
+        </a>
+      </h3>
+
+      
+      <h3 *ngIf="!userIsAuthenticated" style="font-size: 0.8rem">
+        <a mat-button routerLink="/auth/login" routerLinkActive="active">Login</a>
+      </h3>
+      <h3  *ngIf="!userIsAuthenticated" style="font-size: 0.8rem">
+        <a mat-button routerLink="/auth/signup" routerLinkActive="active">Signup</a>
+      </h3>
+      <h3 *ngIf="userIsAuthenticated" style="font-size: 0.8rem">
+        <button mat-button (click)="onLogout()"  >Logout</button>
+      </h3>
+    </div>
+  </div>
+</div>
