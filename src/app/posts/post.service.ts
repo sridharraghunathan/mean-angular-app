@@ -92,6 +92,7 @@ export class PostService {
     this.http
       .post<{ status: string; post: Post }>(this.BACKEND_URL, post)
       .subscribe((response) => {
+        console.log(response)
         // const postData = {
         //   id: response.post.id,
         //   title: title,

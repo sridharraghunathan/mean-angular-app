@@ -98,7 +98,7 @@ export class CreatePostComponent implements OnInit {
         this.form.value.image
       );
     }
-    this.form.reset();
+ 
     // this.posts = {
     //   title: postForm.value.title,
     //   content: postForm.value.content,
