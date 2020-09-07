@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   apiUrl : 'http://localhost:3000/api'
-  
+  //apiUrl: 'https://post-message-account.herokuapp.com/api'
+
 };
 
 

@@ -18,7 +18,7 @@ export class PostListComponent implements OnInit, OnDestroy {
   userId: string;
   isLoading = false;
   totalSize = 10;
-  postPerPage = 2;
+  postPerPage = 10;
   currentpage = 1;
   userIsAuthenticated: boolean = false;
   pageSizeOptions = [1, 2, 5, 10, 20];
@@ -61,8 +61,13 @@ export class PostListComponent implements OnInit, OnDestroy {
     this.postService.getPosts(this.postPerPage, this.currentpage);
   }
   onDelete(id: string) {
-    this.postService.deletePost(id).subscribe((data) => {
-      this.postService.getPosts(this.postPerPage, this.currentpage);
-    });
+    this.postService.deletePost(id).subscribe(
+      (data) => {
+        this.postService.getPosts(this.postPerPage, this.currentpage);
+      },
+      () => {
+        this.isLoading = false;
+      }
+    );
   }
 }
